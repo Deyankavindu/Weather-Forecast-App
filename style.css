@@ -19,7 +19,12 @@ body{
     padding: 30px;
     transition: background-image 0.3s ease;
     background: var(--primary--clr);
-    background-image: linear-gradient(rgba(0,0,0,0.5)),rgba(0,0,0,0.5),url(./img/);
+    background-image: linear-gradient(rgba(0,0,0,0.5)),rgba(0,0,0,0.5);
+    background-image: url(./img/./icon/mesmerizing-view-fresh-green-fields-cloudy-sky.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
 }
 img{
     width: 100%;
@@ -109,6 +114,7 @@ img{
     height: 1px;
     margin:20px 0 ;
     background-color: black;
+    margin-top: 20px;
  }
  .condition-rain{
     font-size: 12px;
@@ -124,6 +130,22 @@ img{
  .condition-rain div i {
     width: 20px;
  }
+
+ .latitude{
+   font-size: 17px;
+
+ }
+
+ .latitude img{
+   width:20px;
+ }
+
+ .longitude{
+   font-size: 17px;
+ }
+ .longitude img{
+   width:20px ;
+ }
  .location{
     display: flex;
     align-items: center;
@@ -138,6 +160,7 @@ img{
     position: relative;
     padding-bottom: 90px;
     background-color: whitesmoke;
+    opacity: 0.9;
  }
  .main nav{
     display: flex;
@@ -238,8 +261,8 @@ img{
    display: flex;
    flex-direction: column;
  }
- .card2 .card-heading{
-   color: rgb(155, 142, 142);
+ .card2 .vding{
+   color: rgb(104, 94, 94);
  }
  .card2 .content{
    margin-top: 20px;

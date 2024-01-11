@@ -3,6 +3,8 @@ dateTime = document.getElementById("date-time");
 currentLocation = document.getElementById("location");
 condition = document.getElementById("condition");
 rain = document.getElementById("rain");
+latitude = document.getElementById("latitude");
+longitude = document.getElementById("longitude");
 mainIcon = document.getElementById("icon");
 uvIndex = document.getElementById("uv-index");
 windSpeed = document.getElementById("wind-speed");
@@ -74,7 +76,7 @@ getPublicIp();
 function getWeatherData(city, unit, hourlyOrWeek) {
   const apiKey = "ECUAMFQF4F9JD8JU85SBLUTZN";
   fetch(
-    'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=ECUAMFQF4F9JD8JU85SBLUTZN&contentType=json',
+    'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/colombo?unitGroup=metric&key=ECUAMFQF4F9JD8JU85SBLUTZN&contentType=json',
     {
       method: "GET",
     }
@@ -91,6 +93,8 @@ function getWeatherData(city, unit, hourlyOrWeek) {
       currentLocation.innerText = data.resolvedAddress;
       condition.innerText = today.condition;
       rain.innerText = "Perc -" + today.precip +"%" ;
+      latitude.innerText = "Latitude : " + today.latitude;
+      longitude.innerText = "Longitude : " + today.longitudeitude;
     });
 }
 
